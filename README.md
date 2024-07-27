@@ -1,6 +1,8 @@
 # Explanation
 Running `turbo watch dev` on Windows and cancelling the process with `ctrl + c` does not gracefully shut down the process and causes the terminal to act in weird ways.  
-This happens when running `turbo` from global install. Running `turbo` from `pnpm` does not seem to cause this "effect".
+
+This happens when running `turbo` from global install (shown in video #1).  
+Running `turbo` from `pnpm` does not seem to cause this "effect" (shown in video #2).  
 
 Testing conditions:
 - OS: Windows 11
@@ -12,7 +14,6 @@ Testing conditions:
   - Inside VSCode with pwsh with all extensions disabled
   - Outside of VSCode in Windows Terminal with pwsh
   - Outside of VSCode in GitBash MINGW64 with xterm
-  - 
 
 # What happens after ctrl + c after running global turbo install?
 * Residual fragments of tui's interface is left on the screen
